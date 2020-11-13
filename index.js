@@ -66,20 +66,18 @@ function total() {
 function searchForItem(item) {
   for (let i = 0; getCart().length > i; i++){
     if (getCart()[i].itemName === item) {
-    return true
+    return i
     } else {
    return false
     }
   }
 }
 
-function removeObject(item) {
-  for (let i = 0; getCart.length > i; i++) {
-    if (getCart()[i].itemName === item) {
-      return getCart().splice(i, 1)
+function removeObject(index) {
+      getCart().splice(index, 1)
+      return getCart()
     }
-  }
-}
+
 
 
 function removeFromCart(item) { 
@@ -87,7 +85,7 @@ function removeFromCart(item) {
     return 'That item is not in your cart.'
     
   } else {
-    return removeObject(item)
+    return removeObject(searchForItem(item))
   } 
   
 }
