@@ -64,12 +64,13 @@ function total() {
 }
 
 function searchForItem(item) {
-  let found = false
   for (let i = 0; getCart().length > i; i++){
     if (getCart()[i].itemName === item) {
-    found = true
-    } 
-  } return found
+    return true
+    } else {
+   return false
+    }
+  }
 }
 
 function removeObject(item) {
