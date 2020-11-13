@@ -69,7 +69,7 @@ function searchForItem(item) {
     if (getCart()[i].itemName === item) {
     found = true
     } 
-}
+  } return found
 }
 
 function removeObject(item) {
