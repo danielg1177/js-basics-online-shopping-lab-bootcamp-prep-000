@@ -67,11 +67,8 @@ function searchForItem(item) {
   let found = false
   for (let i = 0; getCart().length > i; i++){
     if (getCart()[i].itemName === item) {
-    found = item
-    return found
-  } else {
-  return found
-  }
+    found = true
+    } 
 }
 }
 
